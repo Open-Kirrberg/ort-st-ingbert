@@ -1,11 +1,6 @@
-# 🗺️ Musterort im Saar LiDAR Explorer
+# 🗺️ St. Ingbert im Saar LiDAR Explorer
 
-> **Vorlage.** Dieses Repository ist die Vorlage (`Open-Kirrberg/ort-vorlage`) für ein Ort-Repository des
-> [Saar LiDAR Explorers](https://open-kirrberg.github.io/saar-lidar-explorer/). Ein neuer Ort entsteht mit
-> „Use this template“; die Schritte stehen in [CONTRIBUTING.md](CONTRIBUTING.md#neuen-ort-anlegen).
-> Im Vorlage-Repository selbst baut der Workflow nichts.
-
-Hier pflegen die **Ortspaten** von Musterort, was der Explorer über ihren Ort zeigt: besondere Orte, Geschichten,
+Hier pflegen die **Ortspaten** von St. Ingbert (Mittelstadt im Saarpfalz-Kreis, AGS 10045117, 49,9 km²), was der Explorer über ihren Ort zeigt: besondere Orte, Geschichten,
 Riesenbäume, Pflanz- und Entsiegelungsaktionen und später eigene 3D-Zonen. Die Geländedaten (Laserscanning) baut
 GitHub Actions aus offenen amtlichen Daten – sie liegen **nicht** in diesem Repository.
 
@@ -39,7 +34,7 @@ Schritt für Schritt: [CONTRIBUTING.md](CONTRIBUTING.md).
 | `.github/workflows/build.yml` | baut die Daten mit der festgelegten Pipeline-Version und veröffentlicht sie auf GitHub Pages |
 | `.github/workflows/checks.yml` | Prüfungen bei jedem Pull Request |
 
-Die veröffentlichten Daten liegen unter `https://open-kirrberg.github.io/<repository>/` (`manifest.json`); der
+Die veröffentlichten Daten liegen unter `https://open-kirrberg.github.io/ort-st-ingbert/` (`manifest.json`); der
 Explorer findet sie über den [Orte-Katalog](https://open-kirrberg.github.io/orte-katalog/catalog.json).
 Ranglisten („Orte im Vergleich“) rechnet der Katalog zentral – ein Ort-Repository kann sie nicht beeinflussen.
 
@@ -47,3 +42,16 @@ Ranglisten („Orte im Vergleich“) rechnet der Katalog zentral – ein Ort-Rep
 
 Code MIT, Texte und Fotos CC BY 4.0 (oder CC BY-SA 4.0 je Beitrag), Datenbeiträge CC0 1.0 bzw. ODbL bei
 OpenStreetMap-Ableitungen. Details und Quellen der Geländedaten: [LIZENZEN.md](LIZENZEN.md).
+
+## Besonderheiten von St. Ingbert
+
+- **Ganze Stadt, alle Stadtteile.** Ein Ort-Repository umfasst die ganze Gemeinde mit ihren fünf Stadtteilen
+  St. Ingbert-Mitte, Rohrbach, Hassel, Oberwürzbach und Rentrisch. Welche 1-km-Kacheln
+  dazugehören, rechnet der Orte-Katalog aus den amtlichen Gemeindegrenzen (50 Kacheln).
+- **Saarland-Daten.** Gelände und Oberfläche aus der Saarland-Befliegung 2025 (LVGL), dazu Luftbilder, 3D-Gebäude,
+  Flurstücke und die historischen Karten des Geoportals Saarland.
+- **Noch keine Punktwolken.** Ortspaten können bis zu fünf eigene Flächen in `ort.toml` eintragen
+  (`[[pointcloud_area]]`, je höchstens 1 km²).
+- **Relikt-Kandidaten sind aus** (Standard für neue Orte, ADR 0053). Einschalten kann sie eine Ortspatin oder ein
+  Ortspate in `ort.toml`, nachdem sie die Kandidaten angesehen und die Denkmalsituation (SDschG Saarland) geprüft haben.
+- **Ortspate gesucht.** Bis sich jemand meldet, betreut der Explorer-Maintainer dieses Repository.
